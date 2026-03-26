@@ -1542,6 +1542,31 @@ body {
   0%,100%{transform:translateX(0)} 25%{transform:translateX(-6px)} 75%{transform:translateX(6px)}
 }
 
+
+/* ── VAT CALCULATOR ─────────────────── */
+.vat-wrap { background:rgba(255,255,255,0.05); border-radius:16px; padding:20px; margin-top:12px; border:1px solid rgba(255,255,255,0.1); }
+.vat-header { display:flex; align-items:center; gap:12px; margin-bottom:18px; }
+.vat-icon { font-size:28px; }
+.vat-title h3 { font-size:15px; font-weight:800; color:#fff; margin:0 0 4px; }
+.vat-title p  { font-size:12px; color:rgba(255,255,255,0.6); margin:0; }
+.vat-label { display:block; font-size:14px; font-weight:700; color:rgba(255,255,255,0.85); margin-bottom:10px; }
+.vat-input-row { display:flex; align-items:center; gap:8px; margin-bottom:14px; }
+.vat-input { background:rgba(255,255,255,0.1); border:2px solid rgba(255,255,255,0.2); border-radius:12px; padding:12px 16px; font-size:18px; font-weight:700; color:#fff; width:160px; text-align:center; outline:none; font-family:Noto Naskh Arabic,serif; transition:border-color .2s; }
+.vat-input:focus { border-color:#F9A825; }
+.vat-currency { font-size:20px; font-weight:800; color:#F9A825; }
+.vat-btns { display:flex; gap:10px; flex-wrap:wrap; }
+.vat-btn { flex:1; min-width:140px; padding:12px 16px; border:none; border-radius:12px; background:linear-gradient(135deg,#1565C0,#1E88E5); color:#fff; font-size:13px; font-weight:700; cursor:pointer; font-family:Noto Naskh Arabic,serif; transition:opacity .2s,transform .1s; }
+.vat-btn:disabled { opacity:.4; cursor:not-allowed; }
+.vat-btn:not(:disabled):hover { transform:translateY(-2px); }
+.vat-btn-extract { background:linear-gradient(135deg,#E65100,#FF7043) !important; }
+.vat-res-card { background:rgba(255,255,255,0.08); border-radius:14px; padding:18px; margin-top:4px; border:1px solid rgba(249,168,37,0.3); }
+.vat-res-title { font-size:15px; font-weight:800; color:#F9A825; margin-bottom:12px; }
+.vat-res-step { font-size:14px; color:rgba(255,255,255,0.85); margin-bottom:8px; padding:8px 12px; background:rgba(255,255,255,0.05); border-radius:8px; }
+.vat-res-divider { height:1px; background:rgba(255,255,255,0.15); margin:10px 0; }
+.vat-res-total { font-size:18px; font-weight:800; color:#4CAF50; margin-bottom:8px; padding:10px 14px; background:rgba(76,175,80,0.1); border-radius:10px; }
+.vat-res-formula { font-size:12px; color:rgba(255,255,255,0.5); margin-top:8px; }
+.vat-reset-btn { margin-top:14px; padding:10px 24px; border:none; border-radius:10px; background:rgba(255,255,255,0.12); color:#fff; font-size:13px; font-weight:700; cursor:pointer; font-family:Noto Naskh Arabic,serif; }
+.vat-reset-btn:hover { background:rgba(255,255,255,0.2); }
 </style>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
 </head>
@@ -3561,7 +3586,101 @@ function buildActivity(act, lessonId) {
   if (act.type === 'maryam_detective') return buildMaryamDetective(lessonId);
   if (act.type === 'city_council')     return buildCityCouncil(lessonId);
   if (act.type === 'time_machine')    return buildTimeMachine(lessonId);
+  if (act.type === 'vat_calculator')  return buildVatCalculator(lessonId);
   return '';
+}
+
+// ─────────────────────────────────────────────
+// VAT CALCULATOR — مع"מ
+// ─────────────────────────────────────────────
+function buildVatCalculator(lid) {
+  return '<div class="vat-wrap" id="vat-' + lid + '">' +
+    '<div class="vat-header">' +
+      '<div class="vat-icon">🧾</div>' +
+      '<div class="vat-title">' +
+        '<h3>مهمتك: احسب ضريبة القيمة المضافة</h3>' +
+        '<p>أدخل السعر واختر نوع الحساب</p>' +
+      '</div>' +
+    '</div>' +
+    '<div class="vat-body">' +
+      '<div class="vat-step" id="vat-step1-' + lid + '">' +
+        '<label class="vat-label">أدخل المبلغ (₪):</label>' +
+        '<div class="vat-input-row">' +
+          '<input type="number" id="vat-input-' + lid + '" class="vat-input" placeholder="مثال: 200" min="1" max="99999" oninput="vatValidate(\'' + lid + '\')">' +
+          '<span class="vat-currency">₪</span>' +
+        '</div>' +
+        '<div class="vat-btns">' +
+          '<button class="vat-btn" id="vat-btn-add-' + lid + '" onclick="vatCalc(\'' + lid + '\',\'add\')" disabled>' +
+            '➕ أضف مع"מ (18%)' +
+          '</button>' +
+          '<button class="vat-btn vat-btn-extract" id="vat-btn-ext-' + lid + '" onclick="vatCalc(\'' + lid + '\',\'extract\')" disabled>' +
+            '➖ استخرج مع"מ من السعر' +
+          '</button>' +
+        '</div>' +
+      '</div>' +
+      '<div class="vat-result" id="vat-result-' + lid + '" style="display:none"></div>' +
+      '<div class="vat-try" id="vat-try-' + lid + '" style="display:none">' +
+        '<button class="vat-reset-btn" onclick="vatReset(\'' + lid + '\')">' +
+          '🔄 جرّب مبلغاً آخر' +
+        '</button>' +
+      '</div>' +
+    '</div>' +
+  '</div>';
+}
+
+function vatValidate(lid) {
+  var val = parseFloat(document.getElementById('vat-input-' + lid).value);
+  var ok = val > 0 && val < 100000;
+  document.getElementById('vat-btn-add-' + lid).disabled = !ok;
+  document.getElementById('vat-btn-ext-' + lid).disabled = !ok;
+}
+
+function vatCalc(lid, mode) {
+  var input = parseFloat(document.getElementById('vat-input-' + lid).value);
+  if (!input || input <= 0) return;
+
+  var html = '';
+  if (mode === 'add') {
+    var vat     = Math.round(input * 0.18 * 100) / 100;
+    var total   = Math.round((input + vat) * 100) / 100;
+    html =
+      '<div class="vat-res-card">' +
+        '<div class="vat-res-title">✅ النتيجة — إضافة مع"מ</div>' +
+        '<div class="vat-res-step">السعر قبل الضريبة: <strong>' + input.toFixed(2) + ' ₪</strong></div>' +
+        '<div class="vat-res-step">× 18% ضريبة = <strong>' + vat.toFixed(2) + ' ₪</strong></div>' +
+        '<div class="vat-res-divider"></div>' +
+        '<div class="vat-res-total">السعر النهائي: <strong>' + total.toFixed(2) + ' ₪</strong></div>' +
+        '<div class="vat-res-formula">📐 المعادلة: ' + input + ' × 1.18 = ' + total.toFixed(2) + ' ₪</div>' +
+      '</div>';
+  } else {
+    var original = Math.round((input / 1.18) * 100) / 100;
+    var vat2     = Math.round((input - original) * 100) / 100;
+    html =
+      '<div class="vat-res-card">' +
+        '<div class="vat-res-title">✅ النتيجة — استخراج مع"מ</div>' +
+        '<div class="vat-res-step">السعر الذي دفعته: <strong>' + input.toFixed(2) + ' ₪</strong></div>' +
+        '<div class="vat-res-step">÷ 1.18 = السعر قبل الضريبة: <strong>' + original.toFixed(2) + ' ₪</strong></div>' +
+        '<div class="vat-res-divider"></div>' +
+        '<div class="vat-res-total">قيمة الضريبة داخله: <strong>' + vat2.toFixed(2) + ' ₪</strong></div>' +
+        '<div class="vat-res-formula">📐 المعادلة: ' + input + ' ÷ 1.18 = ' + original.toFixed(2) + ' ₪</div>' +
+      '</div>';
+  }
+
+  var resEl = document.getElementById('vat-result-' + lid);
+  resEl.innerHTML = html;
+  resEl.style.display = 'block';
+  document.getElementById('vat-step1-' + lid).querySelectorAll('.vat-btn').forEach(function(b){ b.disabled = true; });
+  document.getElementById('vat-try-' + lid).style.display = 'block';
+  resEl.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+}
+
+function vatReset(lid) {
+  document.getElementById('vat-input-' + lid).value = '';
+  document.getElementById('vat-result-' + lid).style.display = 'none';
+  document.getElementById('vat-try-' + lid).style.display = 'none';
+  document.getElementById('vat-btn-add-' + lid).disabled = true;
+  document.getElementById('vat-btn-ext-' + lid).disabled = true;
+  document.getElementById('vat-input-' + lid).focus();
 }
 
 function buildAmirSteps(lid) {
