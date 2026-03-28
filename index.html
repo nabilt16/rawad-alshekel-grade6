@@ -1567,6 +1567,87 @@ body {
 .vat-res-formula { font-size:12px; color:rgba(255,255,255,0.5); margin-top:8px; }
 .vat-reset-btn { margin-top:14px; padding:10px 24px; border:none; border-radius:10px; background:rgba(255,255,255,0.12); color:#fff; font-size:13px; font-weight:700; cursor:pointer; font-family:Noto Naskh Arabic,serif; }
 .vat-reset-btn:hover { background:rgba(255,255,255,0.2); }
+
+/* ── SMART SHOPPER ─────────────────── */
+.ss-wrap { background:rgba(255,255,255,0.05); border-radius:16px; padding:20px; margin-top:12px; border:1px solid rgba(255,255,255,0.1); }
+.ss-header { display:flex; align-items:center; gap:12px; margin-bottom:16px; }
+.ss-icon { font-size:28px; }
+.ss-title h3 { font-size:15px; font-weight:800; color:#fff; margin:0 0 4px; }
+.ss-title p  { font-size:12px; color:rgba(255,255,255,0.6); margin:0; }
+.ss-product-name { font-size:15px; font-weight:700; color:#F9A825; margin-bottom:14px; text-align:center; }
+.ss-options { display:flex; gap:12px; align-items:center; flex-wrap:wrap; margin-bottom:14px; }
+.ss-option { flex:1; min-width:140px; background:rgba(255,255,255,0.08); border-radius:14px; padding:14px; border:2px solid rgba(255,255,255,0.15); }
+.ss-opt-label { font-size:11px; font-weight:800; color:rgba(255,255,255,0.5); margin-bottom:4px; }
+.ss-opt-name { font-size:14px; font-weight:700; color:#fff; margin-bottom:4px; }
+.ss-opt-price { font-size:20px; font-weight:800; color:#F9A825; margin-bottom:10px; }
+.ss-opt-input-row { display:flex; align-items:center; gap:6px; flex-wrap:wrap; }
+.ss-opt-input-row label { font-size:11px; color:rgba(255,255,255,0.6); width:100%; }
+.ss-input { background:rgba(255,255,255,0.1); border:2px solid rgba(255,255,255,0.2); border-radius:8px; padding:8px 10px; font-size:14px; font-weight:700; color:#fff; width:90px; text-align:center; outline:none; font-family:Noto Naskh Arabic,serif; }
+.ss-input:focus { border-color:#F9A825; }
+.ss-vs { font-size:18px; font-weight:800; color:rgba(255,255,255,0.4); text-align:center; }
+.ss-hint { font-size:12px; color:rgba(255,255,255,0.5); background:rgba(255,255,255,0.05); padding:8px 12px; border-radius:8px; margin-bottom:12px; }
+.ss-check-btn { width:100%; padding:12px; border:none; border-radius:12px; background:linear-gradient(135deg,#2E7D32,#43A047); color:#fff; font-size:14px; font-weight:700; cursor:pointer; font-family:Noto Naskh Arabic,serif; }
+.ss-check-btn:disabled { opacity:.4; cursor:not-allowed; }
+.ss-res-card { border-radius:12px; padding:16px; margin-top:12px; }
+.ss-correct { background:rgba(76,175,80,0.15); border:1px solid rgba(76,175,80,0.4); }
+.ss-wrong   { background:rgba(244,67,54,0.1); border:1px solid rgba(244,67,54,0.3); }
+.ss-res-title { font-size:16px; font-weight:800; margin-bottom:10px; }
+.ss-res-row { font-size:13px; color:rgba(255,255,255,0.8); margin-bottom:6px; padding:6px 10px; background:rgba(255,255,255,0.05); border-radius:6px; }
+.ss-res-winner { font-size:15px; font-weight:800; color:#4CAF50; margin-top:10px; padding:8px 12px; background:rgba(76,175,80,0.1); border-radius:8px; }
+
+.ss-choice-btns { display:flex; gap:10px; }
+.ss-choice-btn { flex:1; padding:11px; border:none; border-radius:10px; background:rgba(255,255,255,0.12); color:#fff; font-size:14px; font-weight:700; cursor:pointer; font-family:Noto Naskh Arabic,serif; border:2px solid rgba(255,255,255,0.2); transition:background .2s; }
+.ss-choice-btn:hover { background:rgba(255,255,255,0.22); }
+.ss-final { font-size:15px; font-weight:800; padding:12px 16px; border-radius:10px; margin-top:10px; }
+.ss-final-ok { background:rgba(76,175,80,0.2); color:#81C784; }
+.ss-final-no { background:rgba(244,67,54,0.15); color:#EF9A9A; }
+
+/* ── INFLATION TIMELINE ─────────────────── */
+.it-wrap { background:rgba(255,255,255,0.05); border-radius:16px; padding:20px; margin-top:12px; border:1px solid rgba(255,255,255,0.1); }
+.it-header { display:flex; align-items:center; gap:12px; margin-bottom:16px; }
+.it-icon { font-size:28px; }
+.it-title h3 { font-size:15px; font-weight:800; color:#fff; margin:0 0 4px; }
+.it-title p  { font-size:12px; color:rgba(255,255,255,0.6); margin:0; }
+.it-table { width:100%; border-collapse:collapse; margin-bottom:18px; font-size:13px; }
+.it-table thead tr { background:rgba(255,255,255,0.08); }
+.it-table th { padding:8px 10px; color:rgba(255,255,255,0.6); font-weight:700; text-align:center; }
+.it-table td { padding:8px 10px; text-align:center; border-bottom:1px solid rgba(255,255,255,0.06); }
+.it-name { text-align:right !important; font-weight:700; color:#fff; }
+.it-price { color:rgba(255,255,255,0.75); }
+.it-now { color:#F9A825 !important; font-weight:800; }
+.it-pct { color:#EF5350; font-weight:800; }
+.it-calc { background:rgba(255,255,255,0.06); border-radius:12px; padding:16px; margin-bottom:14px; }
+.it-calc-title { font-size:14px; font-weight:800; color:#F9A825; margin-bottom:8px; }
+.it-calc-q { font-size:13px; color:rgba(255,255,255,0.75); margin-bottom:12px; }
+.it-calc-row { display:flex; align-items:center; gap:12px; flex-wrap:wrap; margin-bottom:12px; }
+.it-calc-box { flex:1; min-width:120px; }
+.it-calc-box label { display:block; font-size:12px; color:rgba(255,255,255,0.6); margin-bottom:6px; }
+.it-input { background:rgba(255,255,255,0.1); border:2px solid rgba(255,255,255,0.2); border-radius:10px; padding:10px; font-size:16px; font-weight:700; color:#fff; width:100%; text-align:center; font-family:Noto Naskh Arabic,serif; outline:none; box-sizing:border-box; }
+.it-input:focus { border-color:#F9A825; }
+.it-arrow { font-size:20px; color:rgba(255,255,255,0.3); }
+.it-check-btn { width:100%; padding:11px; border:none; border-radius:10px; background:linear-gradient(135deg,#1565C0,#1E88E5); color:#fff; font-size:14px; font-weight:700; cursor:pointer; font-family:Noto Naskh Arabic,serif; }
+.it-check-btn:disabled { opacity:.4; cursor:not-allowed; }
+.it-res-ok { background:rgba(76,175,80,0.15); border:1px solid rgba(76,175,80,0.4); border-radius:10px; padding:12px; color:#81C784; font-weight:700; margin-top:10px; font-size:14px; }
+.it-res-no { background:rgba(244,67,54,0.1); border:1px solid rgba(244,67,54,0.3); border-radius:10px; padding:12px; color:#EF9A9A; margin-top:10px; font-size:14px; }
+.it-insight { background:rgba(249,168,37,0.08); border:1px solid rgba(249,168,37,0.2); border-radius:12px; padding:16px; }
+.it-insight-title { font-size:14px; font-weight:800; color:#F9A825; margin-bottom:10px; }
+.it-insight-row { display:flex; align-items:center; gap:10px; }
+.it-insight-row label { font-size:13px; color:rgba(255,255,255,0.75); }
+.it-input-sm { background:rgba(255,255,255,0.1); border:2px solid rgba(255,255,255,0.2); border-radius:8px; padding:8px; font-size:15px; font-weight:700; color:#fff; width:70px; text-align:center; font-family:Noto Naskh Arabic,serif; outline:none; }
+.it-input-sm:focus { border-color:#F9A825; }
+.it-r72-box { margin-top:10px; background:rgba(249,168,37,0.12); border-radius:8px; padding:10px 14px; font-size:13px; font-weight:700; color:#F9A825; }
+
+.it-insight-q { font-size:13px; color:rgba(255,255,255,0.75); margin-bottom:12px; background:rgba(255,255,255,0.05); padding:8px 12px; border-radius:8px; }
+.it-insight-steps { margin-bottom:12px; }
+.it-step { display:flex; align-items:flex-start; gap:10px; font-size:13px; color:rgba(255,255,255,0.8); margin-bottom:8px; }
+.it-step-num { background:#F9A825; color:#000; border-radius:50%; width:20px; height:20px; min-width:20px; display:flex; align-items:center; justify-content:center; font-size:11px; font-weight:800; margin-top:1px; }
+
+.it-note { display:flex; gap:10px; align-items:flex-start; background:rgba(255,255,255,0.06); border:1px solid rgba(255,255,255,0.12); border-radius:10px; padding:12px 14px; margin-top:10px; font-size:12px; color:rgba(255,255,255,0.65); line-height:1.7; }
+.it-note-icon { font-size:16px; margin-top:1px; }
+
+.it-calc-annual { background:rgba(249,168,37,0.08); border:1px solid rgba(249,168,37,0.2); border-radius:12px; padding:14px 16px; margin-top:10px; }
+.it-annual-title { font-size:14px; font-weight:800; color:#F9A825; margin-bottom:10px; }
+.it-annual-steps { display:flex; flex-direction:column; gap:8px; }
 </style>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
 </head>
@@ -3587,7 +3668,294 @@ function buildActivity(act, lessonId) {
   if (act.type === 'city_council')     return buildCityCouncil(lessonId);
   if (act.type === 'time_machine')    return buildTimeMachine(lessonId);
   if (act.type === 'vat_calculator')  return buildVatCalculator(lessonId);
+  if (act.type === 'smart_shopper')   return buildSmartShopper(lessonId);
+  if (act.type === 'inflation_timeline') return buildInflationTimeline(lessonId);
   return '';
+}
+
+// ─────────────────────────────────────────────
+// INFLATION TIMELINE — سلة التسوق عبر الزمن
+// ─────────────────────────────────────────────
+function buildInflationTimeline(lid) {
+  var items = [
+    { name: 'خبز (رغيف)', icon: '🍞', price2005: 4,    price2015: 5.6,  price2025: 8.0  },
+    { name: 'حليب (لتر)', icon: '🥛', price2005: 5,    price2015: 7.1,  price2025: 9.9  },
+    { name: 'بيضة',       icon: '🥚', price2005: 1.0,  price2015: 1.4,  price2025: 2.0  },
+    { name: 'بنزين (لتر)',icon: '⛽', price2005: 4.5,  price2015: 6.3,  price2025: 9.0  },
+    { name: 'شاورما',     icon: '🥙', price2005: 22.0, price2015: 31.0, price2025: 43.8 },
+  ];
+
+  var rows = items.map(function(it) {
+    var pct = Math.round(((it.price2025 - it.price2005) / it.price2005) * 100);
+    return '<tr>' +
+      '<td class="it-name">' + it.icon + ' ' + it.name + '</td>' +
+      '<td class="it-price">' + it.price2005 + ' ₪</td>' +
+      '<td class="it-price">' + it.price2015 + ' ₪</td>' +
+      '<td class="it-price it-now">' + it.price2025 + ' ₪</td>' +
+      '<td class="it-pct">+' + pct + '%</td>' +
+    '</tr>';
+  }).join('');
+
+  return '<div class="it-wrap" id="it-' + lid + '">' +
+    '<div class="it-header">' +
+      '<div class="it-icon">📊</div>' +
+      '<div class="it-title">' +
+        '<h3>سلة التسوق عبر الزمن</h3>' +
+        '<p>كيف تغيرت أسعار المنتجات الأساسية؟</p>' +
+      '</div>' +
+    '</div>' +
+    '<div class="it-body">' +
+      '<table class="it-table">' +
+        '<thead><tr><th>المنتج</th><th>2005</th><th>2015</th><th>2025</th><th>الارتفاع</th></tr></thead>' +
+        '<tbody>' + rows + '</tbody>' +
+      '</table>' +
+      '<div class="it-calc">' +
+        '<div class="it-calc-title">🧮 احسب بنفسك:</div>' +
+        '<div class="it-calc-q">لو اشتريت هذه السلة كاملة عام 2005، كم كانت تكلّف؟ والآن 2025؟</div>' +
+        '<div class="it-calc-row">' +
+          '<div class="it-calc-box">' +
+            '<label>مجموع 2005 (₪)</label>' +
+            '<input type="number" id="it-2005-' + lid + '" class="it-input" data-lid="' + lid + '" placeholder="?">' +
+          '</div>' +
+          '<div class="it-arrow">→</div>' +
+          '<div class="it-calc-box">' +
+            '<label>مجموع 2025 (₪)</label>' +
+            '<input type="number" id="it-2025-' + lid + '" class="it-input" data-lid="' + lid + '" placeholder="?">' +
+          '</div>' +
+        '</div>' +
+        '<button class="it-check-btn" id="it-check-' + lid + '" data-lid="' + lid + '" disabled>✅ تحقق</button>' +
+        '<div class="it-result" id="it-result-' + lid + '" style="display:none"></div>' +
+      '</div>' +
+      '<div class="it-insight">' +
+        '<div class="it-insight-title">💡 قاعدة 72 — احسب بنفسك!</div>' +
+        '<div class="it-insight-q">من الجدول: السلة كانت 36.5 ₪ عام 2005 وأصبحت ~72.7 ₪ عام 2025 (20 سنة).</div>' +
+        '<div class="it-insight-steps">' +
+          '<div class="it-step"><span class="it-step-num">1</span> معدل التضخم السنوي في إسرائيل هو حوالي 3-4% سنوياً.</div>' +
+          '<div class="it-step"><span class="it-step-num">2</span> أدخل هذا الرقم في قاعدة 72 وشاهد ماذا يحدث!</div>' +
+        '</div>' +
+        '<div class="it-insight-row">' +
+          '<label>أدخل نسبة التضخم (مثلاً: 3 أو 4):</label>' +
+          '<input type="number" id="it-rate-' + lid + '" class="it-input-sm it-rate-input" data-lid="' + lid + '" placeholder="؟" min="1" max="20">' +
+        '</div>' +
+        '<div class="it-r72-box" id="it-r72-' + lid + '" style="display:none"></div>' +
+      '</div>' +
+    '</div>' +
+  '</div>';
+}
+
+function itCheck(lid) {
+  var v1 = parseFloat(document.getElementById('it-2005-' + lid).value);
+  var v2 = parseFloat(document.getElementById('it-2025-' + lid).value);
+  document.getElementById('it-check-' + lid).disabled = !(v1 > 0 && v2 > 0);
+}
+
+// Event delegation for inflation timeline inputs
+document.addEventListener('input', function(e) {
+  if (e.target.matches('.it-input[data-lid]') && !e.target.classList.contains('it-rate-input')) {
+    itCheck(e.target.getAttribute('data-lid'));
+  }
+  if (e.target.classList.contains('it-rate-input')) {
+    var lid = e.target.getAttribute('data-lid');
+    var rate = parseFloat(e.target.value);
+    var el = document.getElementById('it-r72-' + lid);
+    if (!el) return;
+    if (!rate || rate <= 0 || rate > 100) { el.style.display='none'; return; }
+    var years = Math.round(72 / rate);
+    el.textContent = 'بتضخم ' + rate + '% سنوياً — كل ' + years + ' سنة تفقد 100 ₪ نصف قيمتها الشرائية! 😮';
+    el.style.display = 'block';
+  }
+});
+
+document.addEventListener('click', function(e) {
+  if (e.target.matches('.it-check-btn[data-lid]')) {
+    itSubmit(e.target.getAttribute('data-lid'));
+  }
+});
+
+function itSubmit(lid) {
+  var real2005 = 4 + 5 + 1.0 + 4.5 + 22;    // = 36.5
+  var real2025 = 8.0 + 9.9 + 2.0 + 9.0 + 43.8; // = 72.7
+  var input2005 = parseFloat(document.getElementById('it-2005-' + lid).value);
+  var input2025 = parseFloat(document.getElementById('it-2025-' + lid).value);
+  var ok2005 = Math.abs(input2005 - real2005) < 1;
+  var ok2025 = Math.abs(input2025 - real2025) < 1;
+  var pct = Math.round(((real2025 - real2005) / real2005) * 100);
+
+  var html = ok2005 && ok2025
+    ? '<div class="it-res-ok">✅ حساب ممتاز! السلة كانت ' + real2005 + ' ₪ وأصبحت ' + real2025 + ' ₪ — ارتفاع ' + pct + '% خلال 20 سنة!</div>'
+    : '<div class="it-res-no">🤔 راجع حساباتك! ' +
+        (!ok2005 ? 'مجموع 2005: ' + real2005 + ' ₪. ' : '') +
+        (!ok2025 ? 'مجموع 2025: ' + real2025 + ' ₪.' : '') +
+      '</div>';
+
+  var calcSteps = '<div class="it-calc-annual">' +
+    '<div class="it-annual-title">🧮 الآن احسب معدل التضخم السنوي:</div>' +
+    '<div class="it-annual-steps">' +
+      '<div class="it-step"><span class="it-step-num">1</span> السلة ارتفعت من 36.5 ₪ إلى 72.7 ₪ — أي تضاعفت تقريباً (×2) خلال 20 سنة.</div>' +
+      '<div class="it-step"><span class="it-step-num">2</span> إذن المعدل السنوي = 72 ÷ 20 سنة = <strong>3.6% سنوياً</strong> — وهذا بالضبط في نطاق 3-4%! ✅</div>' +
+      '<div class="it-step"><span class="it-step-num">3</span> الآن أدخل 3.6 في قاعدة 72 أدناه وشاهد ماذا يحدث 👇</div>' +
+    '</div>' +
+  '</div>';
+
+  var note = '<div class="it-note">' +
+    '<span class="it-note-icon">📌</span>' +
+    '<span>ملاحظة: التضخم الحقيقي لا يُقاس بسلة التسوق فقط — بل يشمل أيضاً: أسعار المسكن، المواصلات، الرعاية الصحية، التعليم، والخدمات. سنتعرف على هذه العوامل في دراسات أعمق لاحقاً.</span>' +
+  '</div>';
+
+  var resEl = document.getElementById('it-result-' + lid);
+  resEl.innerHTML = html + calcSteps + note;
+  resEl.style.display = 'block';
+  document.getElementById('it-check-' + lid).disabled = true;
+  resEl.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+}
+
+// ─────────────────────────────────────────────
+// SMART SHOPPER — المستهلك الذكي
+// ─────────────────────────────────────────────
+function buildSmartShopper(lid, excludeIdx) {
+  var products = [
+    { name: 'زيت زيتون', a: { label: 'علبة 750 مل', price: 24, qty: 750 }, b: { label: 'علبة 1.5 لتر', price: 42, qty: 1500 }, unit: 'مل' },
+    { name: 'عصير برتقال', a: { label: 'كرتون 1 لتر', price: 8, qty: 1000 }, b: { label: 'كرتون 2 لتر', price: 14, qty: 2000 }, unit: 'مل' },
+    { name: 'أرز', a: { label: 'كيس 1 كغم', price: 9, qty: 1000 }, b: { label: 'كيس 2 كغم', price: 16, qty: 2000 }, unit: 'غرام' },
+    { name: 'شامبو', a: { label: 'زجاجة 400 مل', price: 18, qty: 400 }, b: { label: 'زجاجة 700 مل', price: 29, qty: 700 }, unit: 'مل' },
+    { name: 'معجون أسنان', a: { label: 'أنبوب 75 مل', price: 7, qty: 75 }, b: { label: 'أنبوب 150 مل', price: 16, qty: 150 }, unit: 'مل' },
+    { name: 'حليب', a: { label: 'كرتون 1 لتر', price: 6, qty: 1000 }, b: { label: 'كرتون 1.5 لتر', price: 11, qty: 1500 }, unit: 'مل' },
+    { name: 'صابون', a: { label: 'قطعتان 200 غرام', price: 9, qty: 400 }, b: { label: 'قطعة واحدة 250 غرام', price: 7, qty: 250 }, unit: 'غرام' },
+    { name: 'كاتشب', a: { label: 'زجاجة 500 غرام', price: 12, qty: 500 }, b: { label: 'زجاجة 750 غرام', price: 16, qty: 750 }, unit: 'غرام' },
+  ];
+  var idx;
+  do { idx = Math.floor(Math.random() * products.length); }
+  while (products.length > 1 && idx === excludeIdx);
+  var p = products[idx];
+  var aQtyNum = p.a.qty;
+  var bQtyNum = p.b.qty;
+
+  return '<div class="ss-wrap" id="ss-' + lid + '" data-idx="' + idx + '">' +
+    '<div class="ss-header">' +
+      '<div class="ss-icon">🛒</div>' +
+      '<div class="ss-title">' +
+        '<h3>تحدي المستهلك الذكي</h3>' +
+        '<p>أي العلبتين أوفر فعلاً؟ احسب سعر الوحدة لتعرف!</p>' +
+      '</div>' +
+    '</div>' +
+    '<div class="ss-body">' +
+      '<div class="ss-product-name">🛍️ المنتج: <strong>' + p.name + '</strong></div>' +
+      '<div class="ss-options">' +
+        '<div class="ss-option" id="ss-opt-a-' + lid + '">' +
+          '<div class="ss-opt-label">الخيار أ</div>' +
+          '<div class="ss-opt-name">' + p.a.label + '</div>' +
+          '<div class="ss-opt-price">' + p.a.price + ' ₪</div>' +
+          '<div class="ss-opt-input-row">' +
+            '<label>سعر الوحدة:</label>' +
+            '<input type="number" step="0.001" id="ss-a-' + lid + '" class="ss-input" placeholder="0.000" oninput="ssCheck(\'' + lid + '\')">' +
+            '<span>₪/' + p.unit + '</span>' +
+          '</div>' +
+        '</div>' +
+        '<div class="ss-vs">VS</div>' +
+        '<div class="ss-option" id="ss-opt-b-' + lid + '">' +
+          '<div class="ss-opt-label">الخيار ب</div>' +
+          '<div class="ss-opt-name">' + p.b.label + '</div>' +
+          '<div class="ss-opt-price">' + p.b.price + ' ₪</div>' +
+          '<div class="ss-opt-input-row">' +
+            '<label>سعر الوحدة:</label>' +
+            '<input type="number" step="0.001" id="ss-b-' + lid + '" class="ss-input" placeholder="0.000" oninput="ssCheck(\'' + lid + '\')">' +
+            '<span>₪/' + p.unit + '</span>' +
+          '</div>' +
+        '</div>' +
+      '</div>' +
+      '<div class="ss-hint">💡 المعادلة: سعر الوحدة = السعر الكلي ÷ الكمية</div>' +
+      '<button class="ss-check-btn" id="ss-check-' + lid + '" onclick="ssSubmit(\'' + lid + '\', ' + p.a.price + ', ' + p.b.price + ', ' + aQtyNum + ', ' + bQtyNum + ', \'' + p.unit + '\')" disabled>✅ تحقق من إجابتي</button>' +
+      '<div class="ss-result" id="ss-result-' + lid + '" style="display:none"></div>' +
+      '<div class="ss-try" id="ss-try-' + lid + '" style="display:none">' +
+        '<button class="vat-reset-btn" onclick="ssReset(\'' + lid + '\')">🔄 جرّب منتجاً آخر</button>' +
+      '</div>' +
+    '</div>' +
+  '</div>';
+}
+
+function ssCheck(lid) {
+  var a = parseFloat(document.getElementById('ss-a-' + lid).value);
+  var b = parseFloat(document.getElementById('ss-b-' + lid).value);
+  document.getElementById('ss-check-' + lid).disabled = !(a > 0 && b > 0);
+}
+
+function ssSubmit(lid, priceA, priceB, qtyA, qtyB, unit) {
+  var inputA = parseFloat(document.getElementById('ss-a-' + lid).value);
+  var inputB = parseFloat(document.getElementById('ss-b-' + lid).value);
+  var realA  = Math.round((priceA / qtyA) * 1000) / 1000;
+  var realB  = Math.round((priceB / qtyB) * 1000) / 1000;
+  var tolA   = Math.abs(inputA - realA) < 0.01;
+  var tolB   = Math.abs(inputB - realB) < 0.01;
+  var bothOk = tolA && tolB;
+
+  if (!bothOk) {
+    // حسابات خاطئة — أرِه الصح وخلّيه يصحح
+    var html = '<div class="ss-res-card ss-wrong">' +
+      '<div class="ss-res-title">🤔 راجع حساباتك!</div>' +
+      (tolA ? '' : '<div class="ss-res-row">الخيار أ: ' + priceA + ' ÷ ' + qtyA + ' = <strong>' + realA.toFixed(3) + '</strong> (أنت كتبت ' + inputA.toFixed(3) + ')</div>') +
+      (tolB ? '' : '<div class="ss-res-row">الخيار ب: ' + priceB + ' ÷ ' + qtyB + ' = <strong>' + realB.toFixed(3) + '</strong> (أنت كتبت ' + inputB.toFixed(3) + ')</div>') +
+      '<div style="font-size:12px;color:rgba(255,255,255,0.5);margin-top:8px">صحح الأرقام وحاول مجدداً</div>' +
+    '</div>';
+    var resEl = document.getElementById('ss-result-' + lid);
+    resEl.innerHTML = html;
+    resEl.style.display = 'block';
+    return;
+  }
+
+  // حسابات صحيحة — اسأله عن اختياره
+  var winnerVal = realA < realB ? 'a' : 'b';
+  var choiceHtml =
+    '<div class="ss-res-card ss-correct">' +
+      '<input type="hidden" id="ss-winner-' + lid + '" value="' + winnerVal + '">' +
+      '<div class="ss-res-title">✅ حسابك صحيح!</div>' +
+      '<div class="ss-res-row">الخيار أ: <strong>' + realA.toFixed(3) + ' ₪/' + unit + '</strong></div>' +
+      '<div class="ss-res-row">الخيار ب: <strong>' + realB.toFixed(3) + ' ₪/' + unit + '</strong></div>' +
+      '<div style="font-size:14px;font-weight:700;color:#fff;margin-top:14px;margin-bottom:10px">🤔 إذن... أيهما تختار؟</div>' +
+      '<div class="ss-choice-btns">' +
+        (Math.random() > 0.5
+          ? '<button class="ss-choice-btn" id="ss-ca-' + lid + '" onclick="ssChoose(this)">الخيار أ</button><button class="ss-choice-btn" id="ss-cb-' + lid + '" onclick="ssChoose(this)">الخيار ب</button>'
+          : '<button class="ss-choice-btn" id="ss-cb-' + lid + '" onclick="ssChoose(this)">الخيار ب</button><button class="ss-choice-btn" id="ss-ca-' + lid + '" onclick="ssChoose(this)">الخيار أ</button>'
+        ) +
+      '</div>' +
+    '</div>';
+
+  var resEl = document.getElementById('ss-result-' + lid);
+  resEl.innerHTML = choiceHtml;
+  resEl.style.display = 'block';
+  document.getElementById('ss-check-' + lid).disabled = true;
+  resEl.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+}
+
+function ssChoose(btn) {
+  var lid     = btn.id.replace('ss-ca-','').replace('ss-cb-','');
+  var choice  = btn.id.indexOf('-ca-') > -1 ? 'a' : 'b';
+  var winnerEl = document.getElementById('ss-winner-' + lid);
+  var winner  = winnerEl ? winnerEl.value : 'a';
+  var isCorrect = choice === winner;
+  var resEl = document.getElementById('ss-result-' + lid);
+
+  var feedback = isCorrect
+    ? '<div class="ss-final ss-final-ok">🏆 ممتاز! الخيار <strong>' + (winner === 'a' ? 'أ' : 'ب') + '</strong> أوفر!</div>'
+    : '<div class="ss-final ss-final-no">❌ ليس هذا! الأوفر الخيار <strong>' + (winner === 'a' ? 'أ' : 'ب') + '</strong> لأن سعر وحدته أقل.</div>';
+
+  var choiceDiv = resEl.querySelector('.ss-choice-btns');
+  if (choiceDiv) choiceDiv.remove();
+  resEl.insertAdjacentHTML('beforeend', feedback);
+  document.getElementById('ss-try-' + lid).style.display = 'block';
+}
+
+function ssReset(lid) {
+  var wrap = document.getElementById('ss-' + lid);
+  if (!wrap) return;
+  var oldIdx = parseInt(wrap.getAttribute('data-idx'));
+  var newHtml = buildSmartShopper(lid, isNaN(oldIdx) ? -1 : oldIdx);
+  var tmp = document.createElement('div');
+  tmp.innerHTML = newHtml;
+  var newWrap = tmp.firstChild;
+  wrap.parentNode.replaceChild(newWrap, wrap);
+  setTimeout(function() {
+    newWrap.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }, 100);
 }
 
 // ─────────────────────────────────────────────
@@ -3611,10 +3979,10 @@ function buildVatCalculator(lid) {
         '</div>' +
         '<div class="vat-btns">' +
           '<button class="vat-btn" id="vat-btn-add-' + lid + '" onclick="vatCalc(\'' + lid + '\',\'add\')" disabled>' +
-            '➕ أضف مع"מ (18%)' +
+            '➕ أضف ضريبة القيمة المضافة (18%)' +
           '</button>' +
           '<button class="vat-btn vat-btn-extract" id="vat-btn-ext-' + lid + '" onclick="vatCalc(\'' + lid + '\',\'extract\')" disabled>' +
-            '➖ استخرج مع"מ من السعر' +
+            '➖ استخرج الضريبة من السعر' +
           '</button>' +
         '</div>' +
       '</div>' +
@@ -3645,7 +4013,7 @@ function vatCalc(lid, mode) {
     var total   = Math.round((input + vat) * 100) / 100;
     html =
       '<div class="vat-res-card">' +
-        '<div class="vat-res-title">✅ النتيجة — إضافة مع"מ</div>' +
+        '<div class="vat-res-title">✅ النتيجة — إضافة ضريبة القيمة المضافة</div>' +
         '<div class="vat-res-step">السعر قبل الضريبة: <strong>' + input.toFixed(2) + ' ₪</strong></div>' +
         '<div class="vat-res-step">× 18% ضريبة = <strong>' + vat.toFixed(2) + ' ₪</strong></div>' +
         '<div class="vat-res-divider"></div>' +
@@ -3657,7 +4025,7 @@ function vatCalc(lid, mode) {
     var vat2     = Math.round((input - original) * 100) / 100;
     html =
       '<div class="vat-res-card">' +
-        '<div class="vat-res-title">✅ النتيجة — استخراج مع"מ</div>' +
+        '<div class="vat-res-title">✅ النتيجة — استخراج ضريبة القيمة المضافة</div>' +
         '<div class="vat-res-step">السعر الذي دفعته: <strong>' + input.toFixed(2) + ' ₪</strong></div>' +
         '<div class="vat-res-step">÷ 1.18 = السعر قبل الضريبة: <strong>' + original.toFixed(2) + ' ₪</strong></div>' +
         '<div class="vat-res-divider"></div>' +
