@@ -1648,6 +1648,24 @@ body {
 .it-calc-annual { background:rgba(249,168,37,0.08); border:1px solid rgba(249,168,37,0.2); border-radius:12px; padding:14px 16px; margin-top:10px; }
 .it-annual-title { font-size:14px; font-weight:800; color:#F9A825; margin-bottom:10px; }
 .it-annual-steps { display:flex; flex-direction:column; gap:8px; }
+
+/* ── DIGITAL PAYMENT ─────────────────── */
+.dp-wrap { background:rgba(255,255,255,0.05); border-radius:16px; padding:20px; margin-top:12px; border:1px solid rgba(255,255,255,0.1); }
+.dp-header { display:flex; align-items:center; gap:12px; margin-bottom:16px; }
+.dp-icon { font-size:28px; }
+.dp-title h3 { font-size:15px; font-weight:800; color:#fff; margin:0 0 4px; }
+.dp-title p  { font-size:12px; color:rgba(255,255,255,0.6); margin:0; }
+.dp-situation { background:rgba(0,105,92,0.2); border:1px solid rgba(0,105,92,0.4); border-radius:10px; padding:12px 14px; font-size:14px; color:rgba(255,255,255,0.9); margin-bottom:12px; }
+.dp-question { font-size:15px; font-weight:800; color:#fff; margin-bottom:12px; }
+.dp-choices { display:flex; flex-direction:column; gap:8px; margin-bottom:4px; }
+.dp-choice { background:rgba(255,255,255,0.08); border:2px solid rgba(255,255,255,0.15); border-radius:10px; padding:11px 14px; font-size:14px; font-weight:600; color:#fff; cursor:pointer; font-family:Noto Naskh Arabic,serif; text-align:right; transition:background .2s; }
+.dp-choice:not(:disabled):hover { background:rgba(255,255,255,0.15); }
+.dp-choice:disabled { cursor:not-allowed; opacity:.7; }
+.dp-correct { border-color:#4CAF50 !important; background:rgba(76,175,80,0.15) !important; }
+.dp-wrong   { border-color:#EF5350 !important; background:rgba(239,83,80,0.1) !important; }
+.dp-fb { border-radius:10px; padding:12px 14px; font-size:14px; font-weight:600; margin-top:8px; }
+.dp-fb-ok { background:rgba(76,175,80,0.15); border:1px solid rgba(76,175,80,0.4); color:#A5D6A7; }
+.dp-fb-no { background:rgba(239,83,80,0.1); border:1px solid rgba(239,83,80,0.3); color:#EF9A9A; }
 </style>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
 </head>
@@ -2810,17 +2828,17 @@ const UNITS = {
         bg: '🛡️', bgColor: 'linear-gradient(140deg,#00695C,#00897B)',
         goal: 'تتعرف على أساليب الاحتيال الرقمي وتحمي بياناتك المالية.',
         story: {
-          text: 'وصل رسالة SMS لنادين: «بنك هبوعليم: حسابك محجوب! اضغط هنا لإعادة التفعيل وأدخل بياناتك.»\n\nشعرت بالذعر وكادت تضغط. لكن تذكرت قاعدة تعلمتها: «توقف — تحقق — لا تضغط».\n\nفتحت تطبيق البنك الرسمي مباشرة — كل شيء طبيعي! الرسالة كانت احتيالاً (Phishing).\n\nأبلغت أهلها وأرسلوا لقطة الشاشة لشرطة الإنترنت. قالت نادين: «لو ضغطت لسرقوا كل ما في حساب أبي!»'
+          text: 'وصل رسالة SMS لنادين: «البنك: حسابك محجوب! اضغط هنا لإعادة التفعيل وأدخل بياناتك.»\n\nشعرت بالذعر وكادت تضغط. لكن تذكرت قاعدة تعلمتها: «توقف — تحقق — لا تضغط».\n\nفتحت تطبيق البنك الرسمي مباشرة — كل شيء طبيعي! الرسالة كانت احتيالاً (Phishing).\n\nأبلغت أهلها وأرسلوا لقطة الشاشة لشرطة الإنترنت. قالت نادين: «لو ضغطت لسرقوا كل ما في حساب أبي!»'
         },
         concept: {
-          text: '💡 الاحتيال الرقمي — كيف تحمي نفسك:\n🔸 Phishing: رسائل مزيفة تتظاهر بأنها بنك/شركة لسرقة بياناتك\n🔸 العلامات الحمراء:\n   • «عاجل! حسابك محجوب» — البنك لا يطلب بياناتك هكذا\n   • رابط مختلف عن الموقع الرسمي (بنك-مزيف.com بدل bankhapoalim.co.il)\n   • أخطاء إملائية في الرسالة\n   • طلب رقم بطاقة أو كلمة مرور عبر رسالة\n🔸 القواعد الذهبية:\n   1. لا تضغط روابط في رسائل مجهولة\n   2. اذهب للموقع مباشرة — لا تتبع الروابط\n   3. لا أحد شرعي يطلب كلمة مرورك\n   4. اتصل بالبنك من الرقم الرسمي للتحقق\n🔸 في إسرائيل: أبلغ على police.gov.il/phishing'
+          text: '💡 الاحتيال الرقمي — كيف تحمي نفسك:\n🔸 Phishing: رسائل مزيفة تتظاهر بأنها بنك/شركة لسرقة بياناتك\n🔸 العلامات الحمراء:\n   • «عاجل! حسابك محجوب» — البنك لا يطلب بياناتك هكذا\n   • رابط مختلف عن الموقع الرسمي (bank-mazif.com بدل الموقع الرسمي للبنك)\n   • أخطاء إملائية في الرسالة\n   • طلب رقم بطاقة أو كلمة مرور عبر رسالة\n🔸 القواعد الذهبية:\n   1. لا تضغط روابط في رسائل مجهولة\n   2. اذهب للموقع مباشرة — لا تتبع الروابط\n   3. لا أحد شرعي يطلب كلمة مرورك\n   4. اتصل بالبنك من الرقم الرسمي للتحقق\n🔸 في إسرائيل: أبلغ على police.gov.il/phishing'
         },
         activity: { type: 'phishing_detector' },
         quiz: {
-          q: '🛡️ وصلتك رسالة: «PayPal: تم تجميد حسابك. أدخل بيانات بطاقتك هنا لإعادة التفعيل». ماذا تفعل؟',
+          q: '🛡️ وصلتك رسالة: «تطبيق الدفع: تم تجميد حسابك. أدخل بيانات بطاقتك هنا لإعادة التفعيل». ماذا تفعل؟',
           choices: [
-            { text: 'أضغط الرابط وأدخل البيانات لأن حسابي مجمّد', ok: false, fb: 'هذا بالضبط ما يريده المحتال! PayPal لا يطلب بيانات بطاقتك عبر SMS. افتح تطبيق PayPal مباشرة للتحقق.' },
-            { text: 'أتجاهل الرسالة وأفتح تطبيق PayPal مباشرة للتحقق', ok: true, fb: '✅ قرار صحيح 100%! دائماً اذهب للمصدر مباشرة — لا تتبع الروابط في الرسائل. إذا كان حسابك فعلاً مجمّداً ستراه في التطبيق.' },
+            { text: 'أضغط الرابط وأدخل البيانات لأن حسابي مجمّد', ok: false, fb: 'هذا بالضبط ما يريده المحتال! تطبيقات الدفع لا تطلب بياناتك عبر SMS. افتح التطبيق الرسمي مباشرة للتحقق.' },
+            { text: 'أتجاهل الرسالة وأفتح التطبيق الرسمي مباشرة للتحقق', ok: true, fb: '✅ قرار صحيح 100%! دائماً اذهب للمصدر مباشرة — افتح التطبيق الرسمي ولا تتبع الروابط في الرسائل.' },
             { text: 'أحذف الرسالة فقط', ok: false, fb: 'الحذف أفضل من الضغط! لكن الأفضل أيضاً الإبلاغ عن الرسالة حتى يُحذَّر الآخرون.' }
           ]
         }
@@ -3660,6 +3678,16 @@ var _amir = {
   profit: -10      // 120 - 130
 };
 
+// ── Fisher-Yates shuffle ──────────────────────
+function shuffleArray(arr) {
+  var a = arr.slice();
+  for (var i = a.length - 1; i > 0; i--) {
+    var j = Math.floor(Math.random() * (i + 1));
+    var tmp = a[i]; a[i] = a[j]; a[j] = tmp;
+  }
+  return a;
+}
+
 function buildActivity(act, lessonId) {
   if (!act) return '';
   if (act.type === 'amir_steps')    return buildAmirSteps(lessonId);
@@ -3670,7 +3698,106 @@ function buildActivity(act, lessonId) {
   if (act.type === 'vat_calculator')  return buildVatCalculator(lessonId);
   if (act.type === 'smart_shopper')   return buildSmartShopper(lessonId);
   if (act.type === 'inflation_timeline') return buildInflationTimeline(lessonId);
+  if (act.type === 'digital_payment')    return buildDigitalPayment(lessonId);
   return '';
+}
+
+// ─────────────────────────────────────────────
+// DIGITAL PAYMENT — المحفظة في هاتفي
+// ─────────────────────────────────────────────
+function buildDigitalPayment(lid) {
+  var idx = Math.floor(Math.random() * DP_SCENARIOS.length);
+  var sc = DP_SCENARIOS[idx];
+
+  // ערבב סדר תשובות אקראי — שמור mapping
+  var shuffled = shuffleArray([0, 1, 2]);
+  var choicesHtml = shuffled.map(function(origIdx, dispIdx) {
+    return '<button class="dp-choice" data-lid="' + lid + '" data-scenidx="' + idx + '" data-cidx="' + origIdx + '">' + sc.choices[origIdx].text + '</button>';
+  }).join('');
+
+  return '<div class="dp-wrap" id="dp-' + lid + '" data-scenidx="' + idx + '">' +
+    '<div class="dp-header">' +
+      '<div class="dp-icon">📱</div>' +
+      '<div class="dp-title">' +
+        '<h3>تحدي الدفع الرقمي</h3>' +
+        '<p>اقرأ الموقف واختر الإجابة الصحيحة</p>' +
+      '</div>' +
+    '</div>' +
+    '<div class="dp-body">' +
+      '<div class="dp-situation">📍 الموقف: <strong>' + sc.situation + '</strong></div>' +
+      '<div class="dp-question">' + sc.q + '</div>' +
+      '<div class="dp-choices" id="dp-choices-' + lid + '">' + choicesHtml + '</div>' +
+      '<div class="dp-result" id="dp-result-' + lid + '" style="display:none"></div>' +
+      '<div class="dp-try" id="dp-try-' + lid + '" style="display:none">' +
+        '<button class="vat-reset-btn" onclick="dpReset(\'' + lid + '\')">🔄 موقف آخر</button>' +
+      '</div>' +
+    '</div>' +
+  '</div>';
+}
+
+document.addEventListener('click', function(e) {
+  if (e.target.classList.contains('dp-choice')) {
+    var lid      = e.target.getAttribute('data-lid');
+    var scenIdx  = parseInt(e.target.getAttribute('data-scenidx'));
+    var cIdx     = parseInt(e.target.getAttribute('data-cidx'));
+    dpAnswer(lid, scenIdx, cIdx);
+  }
+});
+
+var DP_SCENARIOS = [
+  { situation: 'دفعت في السوبرماركت بهاتفك عبر تطبيق الدفع', q: 'ما الذي أُرسل للمتجر فعلاً؟', choices: [
+    { text: 'رقم بطاقتك الحقيقي',                              ok: false, fb: 'تطبيقات الدفع لا ترسل رقم بطاقتك أبداً! ترسل رمزاً مؤقتاً مشفراً يختلف في كل عملية.' },
+    { text: 'رمز مشفر مؤقت خاص بهذه العملية',                  ok: true,  fb: '✅ صح! هذا يسمى Tokenization — حتى لو سرق أحد هذا الرمز لن يستطيع استخدامه مرة ثانية!' },
+    { text: 'اسمك ورقم هاتفك',                                 ok: false, fb: 'لا — يُرسَل رمز مشفر مؤقت فقط. لا بيانات شخصية تُرسل للمتجر.' },
+  ]},
+  { situation: 'صديقك يطلب منك تحويل 30 ₪ عبر تطبيق تحويل', q: 'ما الخطوة الأولى قبل أن تضغط "إرسال"؟', choices: [
+    { text: 'التحقق من أن الرقم المُدخَل صحيح',                ok: true,  fb: '✅ دائماً تحقق من الرقم! التحويل الخاطئ صعب استرداده. ثانية واحدة للتحقق توفر عليك الكثير.' },
+    { text: 'إرسال فوراً لأن التطبيق سريع',                    ok: false, fb: 'السرعة جيدة لكن التسرع خطير! تحقق من الرقم أولاً — التحويل الخاطئ يصعب استرداده.' },
+    { text: 'اسأل أهلك أولاً',                                 ok: false, fb: 'استشارة الأهل جيدة في المبالغ الكبيرة، لكن الأهم هنا التحقق من صحة الرقم قبل الإرسال.' },
+  ]},
+  { situation: 'تريد شراء لعبة أونلاين بـ25 ₪', q: 'أي وسيلة دفع أكثر أماناً للشباب؟', choices: [
+    { text: 'بطاقة ائتمان بدون حد إنفاق',                     ok: false, fb: 'البطاقة الائتمانية بدون حد خطرة — قد تنفق أكثر مما تملك وتتراكم عليك الديون.' },
+    { text: 'بطاقة مسبقة الدفع (Prepaid) بمبلغ محدد',          ok: true,  fb: '✅ ممتاز! البطاقة المسبقة الدفع تحدد سقفاً للإنفاق — لا ديون ولا مفاجآت في نهاية الشهر.' },
+    { text: 'إعطاء رقم بطاقة أهلك',                           ok: false, fb: 'هذا ليس آمناً — لا تعطِ أحداً رقم بطاقة غيرك. استخدم بطاقتك الخاصة أو بطاقة مسبقة الدفع.' },
+  ]},
+  { situation: 'لاحظت أنك أنفقت 200 ₪ هذا الأسبوع بدون أن تشعر', q: 'ما سبب هذه الظاهرة عند الدفع الرقمي؟', choices: [
+    { text: 'الدفع الرقمي أغلى من النقود',                     ok: false, fb: 'ليس الأمر في السعر — الدفع الرقمي لا يكلف أكثر. المشكلة في الإحساس بالمال.' },
+    { text: 'لا تشعر بقيمة المال لأنك لا ترى النقود تخرج',   ok: true,  fb: '✅ بالضبط! هذا "الإنفاق الشفاف" — الدفع السهل يجعلنا ننفق أكثر بدون وعي. الحل: تتبع مصاريفك.' },
+    { text: 'الهاتف يخطئ في الحسابات',                        ok: false, fb: 'الهاتف لا يخطئ في الحسابات. المشكلة أنك لا تشعر بالمال يخرج عند الدفع الرقمي.' },
+  ]},
+];
+
+function dpAnswer(lid, scenIdx, cIdx) {
+  var sc      = DP_SCENARIOS[scenIdx];
+  var choice  = sc.choices[cIdx];
+  var resEl   = document.getElementById('dp-result-' + lid);
+  var choicesEl = document.getElementById('dp-choices-' + lid);
+
+  choicesEl.querySelectorAll('.dp-choice').forEach(function(b, i) {
+    b.disabled = true;
+    if (i === cIdx) b.classList.add(choice.ok ? 'dp-correct' : 'dp-wrong');
+    if (sc.choices[i].ok) b.classList.add('dp-correct');
+  });
+
+  resEl.innerHTML = '<div class="dp-fb ' + (choice.ok ? 'dp-fb-ok' : 'dp-fb-no') + '">' + choice.fb + '</div>';
+  resEl.style.display = 'block';
+  document.getElementById('dp-try-' + lid).style.display = 'block';
+  resEl.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+}
+
+function dpReset(lid) {
+  var wrap = document.getElementById('dp-' + lid);
+  if (!wrap) return;
+  var oldIdx = parseInt(wrap.getAttribute('data-scenidx'));
+  var newIdx;
+  do { newIdx = Math.floor(Math.random() * DP_SCENARIOS.length); }
+  while (DP_SCENARIOS.length > 1 && newIdx === oldIdx);
+  var newHtml = buildDigitalPayment(lid);
+  var tmp = document.createElement('div');
+  tmp.innerHTML = newHtml;
+  var newWrap = tmp.firstChild;
+  wrap.parentNode.replaceChild(newWrap, wrap);
+  setTimeout(function() { newWrap.scrollIntoView({ behavior: 'smooth', block: 'start' }); }, 100);
 }
 
 // ─────────────────────────────────────────────
@@ -3912,7 +4039,7 @@ function ssSubmit(lid, priceA, priceB, qtyA, qtyB, unit) {
       '<div class="ss-res-row">الخيار ب: <strong>' + realB.toFixed(3) + ' ₪/' + unit + '</strong></div>' +
       '<div style="font-size:14px;font-weight:700;color:#fff;margin-top:14px;margin-bottom:10px">🤔 إذن... أيهما تختار؟</div>' +
       '<div class="ss-choice-btns">' +
-        (Math.random() > 0.5
+        (shuffleArray(['a','b'])[0] === 'a'
           ? '<button class="ss-choice-btn" id="ss-ca-' + lid + '" onclick="ssChoose(this)">الخيار أ</button><button class="ss-choice-btn" id="ss-cb-' + lid + '" onclick="ssChoose(this)">الخيار ب</button>'
           : '<button class="ss-choice-btn" id="ss-cb-' + lid + '" onclick="ssChoose(this)">الخيار ب</button><button class="ss-choice-btn" id="ss-ca-' + lid + '" onclick="ssChoose(this)">الخيار أ</button>'
         ) +
